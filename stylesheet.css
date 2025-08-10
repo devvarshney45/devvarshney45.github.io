@@ -19,7 +19,23 @@ body{
     justify-content: space-between;
     align-items: center;
     z-index: 100;
+    flex-wrap: wrap;
+      padding: 20px 10%;
 }
+.navbar {
+  display: flex;
+  flex-wrap: wrap; /* allow links to wrap */
+  justify-content: center; /* center the nav links */
+  gap: 15px; /* spacing between links */
+  width: 100%; /* full width on mobile */
+  margin-top: 10px;
+}
+
+
+
+
+
+
 .logo{
     position:relative;
     font-size: 25px;
@@ -32,13 +48,13 @@ body{
 }
 .navbar a{
     display: inline-block;
-    font-size: 25px;
+    font-size: 18px;
     color: #fff;
     text-decoration: none;
     font-weight: 500;
-    margin-left: 35px;
+    margin-left: 0px;
     transition: .3s;
-    opacity: 0;
+    opacity: 1;
     animation: slideTop .5s ease forwards;
 }
 .navbar a:hover{
@@ -209,18 +225,90 @@ body{
     gap: 20px;                  /* Image aur text ke beech ka gap (kam-badh kar sakte ho) */
 }
 .about-img img {
-    width: 350px;               /* Image size control */
+    width: 300px;               /* Image size control */
     height: auto;
-    margin: 100px;
+    margin: 0px;
+    padding: 100;
 
 }
 
 .about-text {
-    margin: 0;
-    /* Extra gap remove */
+    margin: 0;                  /* Extra gap remove */
 }
 .about-text {
-    font-size: 18px;   /* Text size badhane/ghatane ke liye value change karo */
+    font-size: 28px;   /* Text size badhane/ghatane ke liye value change karo */
      margin-top: -250px; 
+}
+.about-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap; /* mobile ke liye */
+
+}
+
+@media(min-width: 768px) {
+  .navbar {
+    width: auto;
+    gap: 35px;
+    margin-top: 0;
+  }
+  .navbar a {
+    font-size: 25px;
+  }
+}
+.home {
+  padding: 70px 18% 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media(max-width: 768px) {
+  .home {
+    padding: 40px 10% 20px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .home-content {
+    max-width: 100%;
+  }
+}
+.about-section, #about {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px 10%;
+  justify-content: center;
+}
+
+.about-img, .about-text {
+  flex: 1 1 300px;
+  max-width: 450px;
+}
+
+.about-text {
+  margin-top: 0 !important; /* remove negative margin on mobile */
+  text-align: left;
+}
+
+@media(max-width: 768px) {
+  .about-text {
+    margin-top: 20px;
+    text-align: center;
+  }
+}
+.services-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-gap: 30px;
+  padding: 0 10%;
+}
+
+@media(max-width: 768px) {
+  .services-list {
+    grid-template-columns: 1fr;
+    padding: 0 5%;
+  }
 }
 
