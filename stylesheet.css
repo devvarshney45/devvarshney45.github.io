@@ -209,7 +209,6 @@ body{
     gap: 20px;                  /* Image aur text ke beech ka gap (kam-badh kar sakte ho) */
 }
 .about-img img {
-    max-width: 100%;
     width: 350px;               /* Image size control */
     height: auto;
     margin: 100px;
@@ -218,33 +217,10 @@ body{
 
 .about-text {
     margin: 0;
-    padding:10px;
     /* Extra gap remove */
 }
 .about-text {
     font-size: 18px;   /* Text size badhane/ghatane ke liye value change karo */
      margin-top: -250px; 
-}
-@media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    text-align: center;
-  }
-  nav ul li {
-    margin: 10px 0;
-  }
-}
-section {
-  padding: 50px 10px; /* mobile ke liye side padding kam */
-}
-
-@media (max-width: 768px) {
-  section {
-    padding: 30px 5px;
-  }
-}
-.container {
-  display: flex;
-  flex-wrap: wrap;
 }
 
