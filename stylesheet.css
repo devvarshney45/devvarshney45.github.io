@@ -517,3 +517,44 @@ body {
     margin-bottom: 20px;
   }
 }
+.buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.3s;
+}
+
+.github-btn {
+    background-color: #333;
+    color: white;
+}
+
+.github-btn:hover {
+    background-color: #555;
+}
+
+.resume-btn {
+    background-color: #0077b5;
+    color: white;
+}
+
+.resume-btn:hover {
+    background-color: #005983;
+}
+
+.btn i {
+    font-size: 18px;
+}
+
