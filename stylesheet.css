@@ -60,7 +60,7 @@ body{
 .navbar a:hover{
     color: aqua;
 }
-.homw{
+.home{
     position:relative;
     width: 100%;
     justify-content: space-between;
@@ -112,6 +112,8 @@ body{
     font-size: 35px;
     text-decoration: none;
     margin: 30px 15px 30px 0;
+    margin-top: -10px;
+    transform: translate(-15px);
 
 }
 .home-sci a:hover{
@@ -311,4 +313,207 @@ body{
     padding: 0 5%;
   }
 }
+/* 🔹 Correct home section */
+.home {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(port.jpeg) center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* horizontally center */
+    padding: 70px 18% 0;
+}
 
+/* 🔹 Mobile view fix */
+@media(max-width: 768px) {
+  .home {
+    flex-direction: column; /* stack vertically */
+    padding: 40px 5%;
+    text-align: center;
+  }
+
+  .home-content {
+    max-width: 100%;
+  }
+
+  .home-sci {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .home-sci a {
+    margin: 10px;
+  }
+
+  .btn-box {
+    align-self: center;
+  }
+}
+.btn-box {
+    display: inline-block;
+    margin-top: 20px;
+    align-self: center; /* flex item center */
+}
+[1:08 pm, 10/8/2025] Dev: /* Mobile view fixes */
+@media (max-width: 768px) {
+
+  /* Navbar */
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  nav a {
+    display: block;
+    margin: 5px 0;
+  }
+
+  /* Home section layout */
+  .home {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .home-content {
+    margin-bottom: 20px;
+  }
+
+  /* Fix image overflow */
+  .home img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    object-fit: contain;
+  }
+
+  /* Fix overlap of button & icons */
+  .home-content .btn {
+    margin-top: 15px;
+    display: inline-block;
+  }
+
+  .home-content .social-icons {
+    margin-top: 10px;
+  }
+}
+[1:29 pm, 10/8/2025] Dev: /* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: #0a2a43;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* Navbar default (desktop) */
+.navbar {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+/* Home section */
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 20px;
+  flex-wrap: wrap;
+}
+
+.home-content {
+  flex: 1 1 300px;
+}
+
+.home-content h1 {
+  font-size: 2rem;
+}
+
+.home-content p {
+  margin: 15px 0;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: cyan;
+  color: black;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.home-img {
+  flex: 1 1 300px;
+  text-align: center;
+}
+
+.home-img img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+  .navbar {
+    display: none;
+    flex-direction: column;
+    background: #0a2a43;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    padding: 10px 0;
+  }
+
+  .navbar.show {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .home {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .home-content {
+    margin-bottom: 20px;
+  }
+}
