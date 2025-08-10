@@ -109,7 +109,7 @@ body{
     background: transparent;
     border: 1px solid #0ef;
     border-radius: 50%;
-    font-size: 35px;
+    font-size: 25px;
     text-decoration: none;
     margin: 30px 15px 30px 0;
     margin-top: -10px;
@@ -557,4 +557,5 @@ body {
 .btn i {
     font-size: 18px;
 }
+
 
