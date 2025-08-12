@@ -1,4 +1,4 @@
-/*var  tyoed=new Typed(".text",{
+var  tyoed=new Typed(".text",{
     strings:["frontend Developer","Problem Solver","Editor"],
     typeSpeed:100,
     backSpeed:100,
@@ -6,8 +6,9 @@
     loop:true
 
 
-});*/
+});
 document.getElementById("menu-icon").addEventListener("click", function () {
   document.getElementById("navbar").classList.toggle("show");
 });
+
 
